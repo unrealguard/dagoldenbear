@@ -1,14 +1,14 @@
-define(['jquery'],
-function ($) {
+define(['lib/jquery/jquery'],
+function (jqueryLocal) {
    var exports = {};
        
-    exports.url = window.location.host + "/api/";
+    exports.url = "/api/";
     
     var DefaultConfig = function (objectType) {
         return {
             method: 'GET',
             dataType: 'json',
-            cache: false,
+            cache: true,
             url: exports.url + objectType,
             success: [],
         };
@@ -19,8 +19,6 @@ function ($) {
         config.success.push(success);
         $.ajax(config);
     };
-    
-    console.log('Jquery: ' + $.jquery());
        
     return exports;
 });

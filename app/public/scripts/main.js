@@ -1,10 +1,14 @@
 requirejs.config({
-   shim: 'lib/jquery/jquery': {
-       exports: 'jquery'
-   }
+    shim: {
+        'lib/jquery/jquery' : {
+            exports: 'jquery'   
+        }
+    }
 });
 
-require(['api/api'], 
-function (    api) {
-    console.log(api.url);
+requirejs(['api/food'], 
+function (foodModule) {
+    console.log("Executing Food Module");
+    
+    foodModule.loadFood();
 });
