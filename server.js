@@ -10,4 +10,9 @@ app.use(connect.favicon());
 appLib.configure(app);
 api.configure(app);
 
-http.createServer(app).listen(process.env.PORT, process.env.IP);
+var ip = process.env.IP || "localhost";
+var port = process.env.PORT || "8080";
+
+http.createServer(app).listen(port, ip);
+
+console.log("Listening at http://" + ip + ":" + port);
