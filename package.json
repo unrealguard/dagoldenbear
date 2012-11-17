@@ -1,0 +1,35 @@
+{
+	"name": "DaGoldenBear",
+	"version": "0.0.1",
+	"description": "A website for the Golden Bear Tavern",
+	"contributors": [
+		{
+			"name": "Bill Jones"
+		},
+		{
+			"name": "Justin Smead"
+		},
+		{
+			"name": "Philipe Araujo"
+		},
+		{
+			"name":	"Bill Egberht"
+		},
+		{
+			"name": "Ben Brooks"
+		}
+	],
+	"scripts": {
+		"start": "node server"
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/unrealguard/dagoldenbear"
+	},
+	"dependencies" : {
+		"connect": "2.7.x"
+	},
+	"engines": {
+		"node": ">=0.6"
+	}
+}
